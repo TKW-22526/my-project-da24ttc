@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "vi">
+	<head>
+		<title>Thiết kế form</title>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "../css/style6.css">
+	</head>
+	<body>
+		<script>
+			const newDiv = document.createElement("div");
+			const newText = document.createTextNode("Thành công");
+			newDiv.setAttribute("class","product-item");
+			
+			//Tạo khung chứa cho hình ảnh
+			const productImg = document.createElement("div");
+			productImg.setAttribute("class","product-img");
+			
+			
+			//Tạo mới một hình ảnh
+			const newImage = document.createElement("img");
+			newImage.setAttribute("src","../assets/images/rose1.jpg");
+			
+			//Gán hình vào khung chứa hình
+			productImg.appendChild(newImage);
+			
+			
+			//Tạo một khung chứa cho thông tin sản phẩm
+			const productInfo = document.createElement("div");
+			productInfo.setAttribute("class","product-info");
+			
+			//Tạo đoạn thông tin tên
+			const productName = document.createElement("p");
+			const productNameText = document.createTextNode("Mì sợi Hương xưa");
+			productName.appendChild(productNameText );
+			
+			//Tạo đoạn thông tin tên
+			const productPrice = document.createElement("p");
+			const productPriceText = document.createTextNode("150000");
+			productPrice.appendChild(productPriceText );
+			
+			
+			//Tạo đoạn thông tin tên
+			const productLink = document.createElement("a");
+			productLink.setAttribute("href","#");
+			const productLinkText = document.createTextNode("Chi tiết sản phẩm");
+			productLink.appendChild(productLinkText);
+			
+			
+			//Thêm thông tin vào khung chưa info
+			productInfo.appendChild(productName);//Thêm tên
+			productInfo.appendChild(productPrice);//Thêm giá
+			productInfo.appendChild(productLink);//Thêm link
+			
+			//Gán newText cho newDiv
+			newDiv.appendChild(productImg);
+			newDiv.appendChild(productInfo);
+			
+			document.body.appendChild(newDiv);
+		</script>
+	</body>
+</html>
